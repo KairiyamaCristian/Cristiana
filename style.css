@@ -76,9 +76,3 @@ section{
   display: block;
 }
 
-.nav{
-  height: auto;
-  width: 100%;
-  display: flex;
-  align-items: space-around;
-}
