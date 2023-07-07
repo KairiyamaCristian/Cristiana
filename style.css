@@ -1,78 +1,120 @@
-  
-  .head-container{
-    display: flexbox;
-    flex-direction: column;
-  }
-  
-  h1{
-    text-align: center;
+:root {
+  --color-white: #f2f2f2;
+  --color-black: #333;
+  --color-black-yellow: #E0DC00;
+  --color-title: #A19E00;
+}
 
-  }
-  
-  table {
-    width: 100%;
-  }
-  
-  th, td {
-    text-align: center;
-    padding: 40px;
-  }
-  
-  th {
-    background-color: #025f8a;
-    color: rgb(253, 253, 253);
-  }
-  
-  tr:nth-child(even) {
-    background-color: #543e91;
-  }
-  body {
-  background-color: #f2f2f2;
-  color: #000000;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--color-white);
+  color: var(--color-black);
   transition: all 0.2s;
 }
 
-body.dark-mode {
-  background-color: #333;
-  color: #f2f2f2;
+img{
+  width: 360px;
+  height: 200px;
 }
 
-.button {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  background-color: transparent;
-  border: none;
-  color: #333;
-  font-size: 1.2rem;
-  cursor: pointer;
+h1 {
+  text-align: center;
+  color: var(--color-title);
 }
 
-.button:hover {
-  color: #666;
+table {
+  width: 100%;
 }
 
-.button:focus {
-  outline: none;
+th,
+td {
+  text-align: center;
+  padding: 0px;
 }
 
-.button.dark-mode {
-  color: #f2f2f2;
+th {
+  background-color: var(--color-black-yellow);
+  color: var(--color-title);
 }
 
-section{
-  padding: 28px;
-  gap: 40px;
-  display: flex;
-  align-items: center;
-  font-size: 40px;
+tr:nth-child(even) {
+  background-color: var(--color-black-yellow);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+nav ul li {
+  margin-bottom: 10px;
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color:var(-color-title);
+  font-size: 20px;
+}
+
+.back-to-menu {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color:var(--color-black);
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.back-to-menu:hover {
+  background-color: var(--color-black-yellow);
+}
+
+section {
+  padding: 20px;
+  font-size: 30px;
 }
 
 .section {
   display: none;
 }
 
-.active {
+.section.active {
   display: block;
 }
+
+/* Estilos para ocultar el menú de navegación */
+.back-to-menu {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color:var(--color-black);
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.back-to-menu:hover {
+  background-color: var(--color-black-yellow);
+}
+
+#navigation.hidden {
+  display: none;
+}
+
+/* Estilos para el diseño responsivo */
+@media (max-width: 768px) {
+  nav ul li a {
+    font-size: 18px;
+  }
+
+  section {
+
+    font-size: 24px;
+  }
+}
+
 
